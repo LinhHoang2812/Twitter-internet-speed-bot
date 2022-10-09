@@ -19,8 +19,6 @@ UPLOAD = 10
 chrome_options = Options()
 chrome_options.add_experimental_option("detach", True)
 
-#driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=chrome_options)
-
 class InternetSpeedTwitterBot():
     def __init__(self):
         self.up= UPLOAD
@@ -45,7 +43,6 @@ class InternetSpeedTwitterBot():
 
     def tweet_at_provider(self):
         self.driver.get("https://twitter.com")
-        #main_window = self.driver.current_window_handle
 
         time.sleep(2)
         cookies = self.driver.find_elements(By.CSS_SELECTOR,".r-1r5su4o div")[1]
